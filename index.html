@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,
+      shrink-to-fit=no"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32"
+      href="./images/favicon-32x32.png">
+    <link href="style.css" rel="stylesheet">
+
+
+    <title>Frontend Mentor | Interactive card details form</title>
+
+
+  </head>
+  <body>
+
+    <div class="main flex_row">
+      <div class="block1 flex1">
+        <div class="card_front">
+          <div class="card_front_number" placeholder="0000 0000 0000 0000">
+            <p id="printNumber">0000 0000 0000 0000</p>
+          </div>
+          <div class="card_front_name_expiration flex_row">
+            <div class="card_front_name" placeholder="Lisa Mermouli"><p
+                id="printName">Lisa Mermouli
+              </p></div>
+            <div class="card_front_date flex_row" placeholder="06/25"><p
+                id="printMonth">00</p><p
+                id="printDateSeparator">/</p><p id="printYear">00</p></div>
+          </div>
+        </div>
+        <div class="card_back">
+          <div class="card_back_cvc" placeholder="786"><p id="printCvc">000</p></div>
+        </div>
+      </div>
+      <div class="block2 flex2 flex_column">
+        <form id="myForm" action="">
+          <div class="card_name flex_column">
+            <label for="card_name">CARDHOLDER NAME</label>
+            <input type="text" name="card_name" id="card_name"
+              oninput="inputName()"
+              placeholder="Jane
+              Appleseed" required>
+            <p id="error_name"></p>
+          </div>
+          <div class="card_number flex_column">
+            <label for="card_number">CARD NUMBER</label>
+            <input type="" name="card_number" id="card_number"
+              oninput="inputNumber()" placeholder="0000 0000 0000 0000"
+              required>
+            <p id="error_number"></p>
+          </div>
+          <div class="exp_cvc flex_row">
+            <div class="expiration flex_column ">
+              <label for="expiration">&nbsp;Month</label>
+              <input type="" name="expiration" id="expiration"
+                placeholder="07" oninput="inputMonth()"
+                required>
+              <p id="error_month"></p>
+            </div>
+            <div class="mm_yy flex_column">
+              <label for="mm_yy">&nbsp;Year</label>
+              <input class="expiry" type="" name="mm_yy" id="mm_yy"
+                oninput="inputYear()"
+                placeholder="25" required>
+              <p id="error_year"></p>
+            </div>
+            <div class="cvc flex_column">
+              <label for="cvc">CVC</label>
+              <input class="expiry" type="in" name="cvc" id="cvc"
+                oninput="inputCvc()"
+                placeholder="017" required>
+              <p id="error_cvc"></p>
+            </div>
+          </div>
+          <div class="submit flex_row">
+            <button id="submit">Confirm</button> </div>
+        </form>
+        <div id="mainThanks" class="hidden">
+          <div class="thanks flex_column">
+            <svg width="80" height="80" fill="none"
+              xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40"
+                fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff"
+                  stroke-width="3"/><defs><linearGradient id="a" x1="-23.014"
+                      y1="11.507" x2="0" y2="91.507"
+                      gradientUnits="userSpaceOnUse"><stop
+                        stop-color="#6348FE"/><stop
+                          offset="1" stop-color="#610595"/></linearGradient></defs></svg>
+                    <h2>Thank You !</h2>
+                    <p>We've added your card details !</p>
+                    <button id="continue">Continue</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
+            <script src="main.js"></script>
+
+          </body>
+        </html>
